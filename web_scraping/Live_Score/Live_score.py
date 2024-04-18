@@ -42,10 +42,9 @@ def getdetails(link) :
     teams = soup2.find_all('span' , {'class' : 'StickyMatchHeaderstyles__StickyMatchHeaderTeamName-zufm40-10 jPrXOi'} , string=True)
    
    
-    try :
-        score = soup2.find ('div' , {"class":"StickyMatchHeaderstyles__StickyMatchScoreContainer-zufm40-11 bhBQAF"}).get_text()      
-    except:
-        score = "-:-"
+  
+    score = soup2.find ('div' , {"class":"StickyMatchHeaderstyles__StickyMatchScoreContainer-zufm40-11 bhBQAF"}).get_text()      
+    
        
     Team1 = teams[0].get_text()
     Team2 = teams[1].get_text()
